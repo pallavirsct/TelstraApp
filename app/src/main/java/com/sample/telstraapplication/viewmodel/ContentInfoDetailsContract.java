@@ -1,15 +1,17 @@
 /**
  * @file ContentInfoDetailsContract.java
- * @brief This is the contract class, it will have interfaces for model, view and presenter.
+ * @brief This is the contract class, it will have interfaces for model, view and viewmodel.
  * @author Pallavi
  * @date 06/12/2019
  */
 
-package com.sample.telstraapplication.presenter;
+package com.sample.telstraapplication.viewmodel;
 
 import com.sample.telstraapplication.model.ContentInfo;
 
 import java.util.List;
+
+import androidx.lifecycle.AndroidViewModel;
 
 public class ContentInfoDetailsContract {
 

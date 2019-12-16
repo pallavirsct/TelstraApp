@@ -6,7 +6,7 @@
  */
 
 
-package com.sample.telstraapplication.presenter;
+package com.sample.telstraapplication.viewmodel;
 
 import android.util.Log;
 

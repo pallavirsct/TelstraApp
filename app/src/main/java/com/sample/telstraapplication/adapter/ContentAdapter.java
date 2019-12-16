@@ -1,5 +1,5 @@
 /**
- * @file ContentInfoAdapter.java
+ * @file ContentAdapter.java
  * @brief This is an adapter class responsible for showing json data.
  * @author Pallavi
  * @date 06/12/2019
@@ -29,13 +29,13 @@ import com.sample.telstraapplication.view.MainActivity;
 
 import java.util.List;
 
-public class ContentInfoAdapter extends RecyclerView.Adapter<ContentInfoAdapter.MyViewHolder>  {
+public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.MyViewHolder>  {
 
     private MainActivity mainActivity;
     private List<ContentInfo> contentInfoList;
 
 
-    public ContentInfoAdapter (MainActivity mainActivity, List<ContentInfo> contentInfoList) {
+    public ContentAdapter (MainActivity mainActivity, List<ContentInfo> contentInfoList) {
         this.mainActivity = mainActivity;
         this.contentInfoList = contentInfoList;
     }
@@ -43,7 +43,7 @@ public class ContentInfoAdapter extends RecyclerView.Adapter<ContentInfoAdapter.
 
     @NonNull
     @Override
-    public ContentInfoAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ContentAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item, parent, false);
 
@@ -51,7 +51,7 @@ public class ContentInfoAdapter extends RecyclerView.Adapter<ContentInfoAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ContentInfoAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ContentAdapter.MyViewHolder holder, int position) {
 
         ContentInfo contentInfo = contentInfoList.get(position);
 

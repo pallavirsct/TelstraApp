@@ -3,8 +3,8 @@ package com.sample.telstraapplication;
 import com.sample.telstraapplication.model.ContentInfo;
 import com.sample.telstraapplication.model.DropBoxContent;
 import com.sample.telstraapplication.network.ApiInterface;
-import com.sample.telstraapplication.presenter.ContentInfoDetailsContract;
-import com.sample.telstraapplication.presenter.ContentInfoDetailsModel;
+import com.sample.telstraapplication.viewmodel.ContentInfoDetailsContract;
+import com.sample.telstraapplication.viewmodel.ContentInfoDetailsModel;
 
 import org.junit.Before;
 import org.junit.Test;

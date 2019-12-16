@@ -23,10 +23,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.sample.telstraapplication.R;
-import com.sample.telstraapplication.adapter.ContentInfoAdapter;
+import com.sample.telstraapplication.adapter.ContentAdapter;
 import com.sample.telstraapplication.model.ContentInfo;
-import com.sample.telstraapplication.presenter.ContentInfoDetailsContract;
-import com.sample.telstraapplication.presenter.ContentInfoDetailsPresenter;
+import com.sample.telstraapplication.viewmodel.ContentInfoDetailsContract;
+import com.sample.telstraapplication.viewmodel.ContentInfoDetailsPresenter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +41,7 @@ public class MainFragement extends Fragment implements ContentInfoDetailsContrac
     private RecyclerView recyclerView;
     private ProgressBar progressBar;
     private LinearLayoutManager layoutManager;
-    private ContentInfoAdapter adapter;
+    private ContentAdapter adapter;
     private List<ContentInfo> contentInfoList ;
 
     @Nullable
@@ -68,7 +68,7 @@ public class MainFragement extends Fragment implements ContentInfoDetailsContrac
         layoutManager = new LinearLayoutManager(((MainActivity)this.getActivity()),LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
         contentInfoList = new ArrayList<>();
-        adapter = new ContentInfoAdapter( ((MainActivity)this.getActivity()), contentInfoList);
+        adapter = new ContentAdapter( ((MainActivity)this.getActivity()), contentInfoList);
         recyclerView.setAdapter(adapter);
         swipeRefreshLayout.setOnRefreshListener(this);
     }
@@ -78,7 +78,7 @@ public class MainFragement extends Fragment implements ContentInfoDetailsContrac
      */
     @Override
     public void onRefresh() {
-        //Initializing presenter
+        //Initializing viewmodel
         contentInfoDetailsPresenter = new ContentInfoDetailsPresenter(this);
         contentInfoDetailsPresenter.requestDataFromServer();
     }

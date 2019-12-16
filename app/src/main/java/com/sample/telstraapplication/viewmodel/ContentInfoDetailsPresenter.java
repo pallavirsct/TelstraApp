@@ -1,12 +1,12 @@
 /**
  * @file ContentInfoDetailsPresenter.java
- * @brief This is the presenter class for contentInfo details functionality, it will act as
+ * @brief This is the viewmodel class for contentInfo details functionality, it will act as
  * an intermediate between views and model
  * @author Pallavi
  * @date 06/12/2019
  */
 
-package com.sample.telstraapplication.presenter;
+package com.sample.telstraapplication.viewmodel;
 
 import com.sample.telstraapplication.model.ContentInfo;
 
